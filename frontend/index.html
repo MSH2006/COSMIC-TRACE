@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSMIC-TRACE</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">NASA SPHEREx Discovery Prototype</div>
+          <h1>COSMIC-TRACE</h1>
+        </div>
+        <button id="play-button" class="primary-button">▶ Play Sky Time Machine</button>
+      </header>
+
+      <main class="panel-grid">
+        <section class="panel sky-panel">
+          <div class="panel-header">
+            <h2>Interactive Sky Explorer</h2>
+            <span id="region-name">Loading region...</span>
+          </div>
+
+          <div class="sky-map" id="sky-map">
+            <div class="source source-main" id="source-object"></div>
+          </div>
+
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <aside class="panel detail-panel">
+          <div class="panel-header">
+            <h2>Candidate Detail</h2>
+          </div>
+
+          <div class="candidate-card">
+            <div class="candidate-header">
+              <div>
+                <div class="eyebrow">Candidate</div>
+                <h3 id="object-id">RW-001</h3>
+              </div>
+              <div class="score-pill">
+                <span>Science Priority</span>
+                <strong id="science-score">--</strong>
+              </div>
+            </div>
+
+            <div class="stat-row">
+              <div>
+                <label>Confidence</label>
+                <strong id="confidence-score">--</strong>
+              </div>
+              <div>
+                <label>Artifact Risk</label>
+                <strong id="artifact-risk">--</strong>
+              </div>
+            </div>
+
+            <div class="explain-box">
+              <h4>Why is this interesting?</h4>
+              <ul id="why-interesting"></ul>
+            </div>
+
+            <div class="passport-box">
+              <h4>Scientific Discovery Passport</h4>
+              <p id="passport-text">Loading...</p>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
